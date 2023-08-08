@@ -37,7 +37,7 @@ exports.get_alltweets=async(req,res)=>{
 exports.delete_tweet =async(req,res)=>{
 
 try {
-    console.log(req)
+
     const tweet = await Tweet.findByIdAndDelete(req.params.id)
 res.status(200).json({
     success:true,
